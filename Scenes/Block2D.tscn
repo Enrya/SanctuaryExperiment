@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqekchpfcywj1"]
+
+[ext_resource type="Texture2D" uid="uid://ck7dgrb11nowk" path="res://Sprites/Solaria Palette.png" id="1_y7x3s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2sbv3"]
+atlas = ExtResource("1_y7x3s")
+region = Rect2(0, 0, 200, 140)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lcqv0"]
+size = Vector2(40, 20)
+
+[node name="Block" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_2sbv3")
+region_enabled = true
+region_rect = Rect2(120, 40, 40, 20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_lcqv0")
